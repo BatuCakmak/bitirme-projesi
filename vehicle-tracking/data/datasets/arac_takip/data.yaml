@@ -1,0 +1,14 @@
+path: data/datasets/arac_takip
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 4
+names: ['Car', 'Motorcycle', 'Bus', 'Truck']
+
+roboflow:
+  workspace: maple-ykhrm
+  project: person-car-bus-truck
+  version: 7
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/maple-ykhrm/person-car-bus-truck/dataset/7
