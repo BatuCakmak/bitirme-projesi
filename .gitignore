@@ -6,3 +6,17 @@ __pycache__/
 *.pt
 .env
 *.mp4
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node / React
+node_modules/
+
+# Java / Spring Boot (Eğer duruyorsa)
+target/
+
+# IDE
+.idea/
+.vscode/
