@@ -16,4 +16,13 @@ public interface VehicleLogRepository extends JpaRepository<VehicleLog, Long> {
     List<Object[]> countVehiclesByType();
     // YENİ EKLENEN: Belirli bir zamandan sonra geçen toplam araç sayısını bulur (Canlı Akış Hızı)
     int countByTimestampAfter(LocalDateTime time);
+
+    // Belirli bir tarih aralığındaki tüm araç loglarını getirir (Saatlik analiz için)
+    List<VehicleLog> findByTimestampBetween(LocalDateTime start, LocalDateTime end);
+
+    // Belirli bir tarih aralığındaki toplam araç sayısını verir (Günlük analiz için)
+    int countByTimestampBetween(LocalDateTime start, LocalDateTime end);
+
+    long countByCameraId(String cameraId);
+    long countByCameraIdAndTimestampAfter(String cameraId, LocalDateTime timestamp);
 }

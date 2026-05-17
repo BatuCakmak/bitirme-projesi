@@ -13,6 +13,9 @@ public class VehicleLog {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // Veritabanındaki otomatik artan anahtarımız
 
+    @Column(name = "camera_id")
+    private String cameraId;
+
     private Long vehicleId; // ByteTrack'in atadığı ID
     private String type;    // Araç türü (Araba, Kamyon vs.)
     private String status;  // Durum (Geçti)
